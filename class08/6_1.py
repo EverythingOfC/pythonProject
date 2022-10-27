@@ -11,12 +11,8 @@ df = df.loc[:,['age','sex','class','fare','survived']]
 grouped = df.groupby(['class'])
 
 
-def min_max(x):
-    return x.max() - x.min()
-
-agg_minmax = grouped.agg({'fare':['min','max'],'age':'mean'})
-print(agg_minmax.head())
-print('\n')
+grouped_filter = grouped.filter(lambda x: len(x)>=200) # 데이터개수가 200개 이상인 그룹을 필터링
+print(grouped_filter.head())
 
 
 

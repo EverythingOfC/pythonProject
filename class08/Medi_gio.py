@@ -11,7 +11,6 @@ print (addr.head()) #작업 확인용 출력
 
 print (addr['시도'].unique())  # 해당 칼럼의 값을 중복을 제거하고 출력함.
 print(addr[addr['시도'] == '창원시'])
-
 addr.iloc[27] = ['경상남도', '창원시']
 addr.iloc[31] = ['경상남도', '창원시']
 
