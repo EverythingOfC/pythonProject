@@ -26,6 +26,7 @@ X = boston_df.drop(['PRICE'], axis = 1,inplace=False)
 # 훈련용 데이터와 평가용 데이터 분할하기
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.3, random_state = 156)
 
+
 lr = LinearRegression() # 회귀분석 모델 생성
 
 lr.fit(X_train, Y_train) # 모델 훈련
