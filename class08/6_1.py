@@ -27,7 +27,6 @@ age_z_score = grouped.age.apply(z_score) # z_score함수에 grouped.age값을 �
 
 print(age_z_score.head());
 
-
 age_filter = grouped.apply(lambda x:x.age.mean() < 30)
 
 for x in age_filter.index:
